@@ -126,7 +126,7 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "Spider Man"
+#define CUSTOM_MACHINE_NAME "Bumblebee"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -356,11 +356,12 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 	
-	// TEVO Tarantula Custom PID Settings - E3D Clone Hotend
-	// PETG: M303 E0 S245 C10
-	#define  DEFAULT_Kp 19.77
-	#define  DEFAULT_Ki 1.76
-	#define  DEFAULT_Kd 55.47 
+	// TEVO Tarantula Custom PID Settings - E3D Volcano Clone Hotend
+  // Fan at 100%
+	// PETG: M303 E0 S225 C10
+	#define  DEFAULT_Kp 22.52
+	#define  DEFAULT_Ki 2.25
+	#define  DEFAULT_Kd 56.26 
   
   // Ultimaker
   //#define  DEFAULT_Kp 22.2
@@ -391,7 +392,7 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -405,10 +406,11 @@
 
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-	// TEVO Tarantula Custom PID Settings - Heatbed with borosilicate glass
-	#define  DEFAULT_bedKp 450.06
-	#define  DEFAULT_bedKi  63.88
-	#define  DEFAULT_bedKd 792.67
+	// TEVO Tarantula Custom PID Settings - Large heatbed with tempered glass
+  // M303 E-1 C10 S60
+	#define  DEFAULT_bedKp 472.35
+	#define  DEFAULT_bedKi 91.52
+	#define  DEFAULT_bedKd 609.45
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
